@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | [Blogr]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    /* body {
+      overflow-x: hidden;
+    } */
+    .bg-img {
+      width: 100vw;
+      height: 90vh;
+      border-radius: 0 0 0 10%;
+      /* object-fit: cover; */
+      position: absolute;
+      z-index: -1;
+      
+     
+
+    }
+    .nav-link{
+      font-family: "Overpass", sans-serif;
+  font-weight: 500;
+
+
+    }
+    .nav-button{
+      font-family: "Overpass", sans-serif;
+  font-weight: 500;
+   color: white;
+    }
+    .navbar-light .navbar-toggler {
+    color: rgb(255 255 255);
+    border-color: rgb(255 255 255);
+}
+
+  /* Adjusting the margin to move the toggler to the left */
+  .navbar-toggler {
+    margin-left: 8rem; /* You can adjust this value as needed */
+  }
+    .hero-heading{
+      margin-top: 80px;
+    }
+    .hero-text{
+      font-size: 1.2rem;
+    }
+    .about-section{
+      margin-top: 20rem;
+    }
+    .about2-section{
+      margin-top: 6rem;
+    }
+    .about-img {
+     
+   
+      margin-left: 8rem;
+    
+    }
+    .about2-img{
+    margin-left: -10rem;
+    max-width: 120%;
+    margin-top: -7rem;
+   
+   }
+    .CTA-section{
+      margin-top: 5rem;
+    
+    }
+    .cta-image {
+      position: absolute;
+    z-index:-1;
+    height: 80vh;
+    width: 100vw;
+
+    border-radius: 0 10% 0 10%;
+    }
+   
+    .cta-heading{
+         font-size: 2.0rem;
+    
+    }
+    .cta-content{
+         font-size: 1rem;
+    }
+    @media only screen and (max-width: 767px) {
+     
+  .nav-button {
+    display: none;
+  }
+  .hero-text{
+      font-size: 1rem;
+    }
+    .hero-heading{
+      font-size: 1.5rem;
+      margin-top: 150px;
+    }
+    .about-img {
+     
+   
+     margin-left: 0;
+   
+   }
+   .about2-img{
+    margin-left: -10rem;
+    /* max-width: 120%; */
+    margin-top: -7rem;
+   
+   }
+   .cta-heading{
+         font-size: 1.0rem;
+         margin-top: -1rem;
+         
+    }
+    .cta-content{
+         font-size: 1rem;
+    }
+  
+
+   
+}
+  </style>
+</head>
+<body>
+ 
+  
+ <div>
+  <img  class="bg-img" src="./images/background-image.png" />
+  <div class="container">
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#"><img src="./images/logo.svg" /></a>
+      <button class="navbar-toggler float-end" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mt-3">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white ms-4" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             Product
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Overview</a></li>
+              <li><a class="dropdown-item" href="#">Pricing</a></li>
+              <li><a class="dropdown-item" href="#"> 
+                Marketplace</a></li>
+                <li><a class="dropdown-item" href="#"> 
+                  Features</a></li>
+                  <li><a class="dropdown-item" href="#"> 
+                    Integrations
+                  </a></li>
+       
+        </ul>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white ms-4" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  Company
+          
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">About</a></li>
+            <li><a class="dropdown-item" href="#">Team</a></li>
+            <li><a class="dropdown-item" href="#"> 
+              Blog</a></li>
+              <li><a class="dropdown-item" href="#"> 
+                Careers</a></li>
+               
+     
+      </ul>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-white ms-4" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Connect
+
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li><a class="dropdown-item" href="#">Contact</a></li>
+          <li><a class="dropdown-item" href="#">Newsletter</a></li>
+          <li><a class="dropdown-item" href="#"> 
+            LinkedIn
+          </a></li>
+            <li><a class="dropdown-item" href="#"> 
+              Careers</a></li>
+             
+   
+    </ul>
+    
+      </div>
+      <div>
+        <button style="background-color: transparent;border: none;" class="nav-button me-4"> Login</button>
+        <button class="btn nav-button px-4" style="background-color: white;color: hsl(353, 100%, 62%)
+        ;border-radius: 25px;"> Sign Up </button>
+      </div>
+    </nav>
+  </div>
+ <h1 class="text-center text-white hero-heading">A modern publishing platform</h1>
+<p class="text-center mt-3 text-white  hero-text"> Grow your audience and build your online brand</p>
+<div class="text-center mt-4">
+
+  <button style="background-color: white;color: hsl(353, 100%, 62%)
+  ;border-radius: 25px;" class="btn hero-button me-4"> Start for Free</button>
+  <button class="btn hero-button px-4" style="background-color:transparent;color: hsl(0, 0%, 100%)
+  ;border-radius: 25px;border: 1px solid white;">Learn More</button>
+</div>
+
+
+ </div>
+ 
+ <div  class="about-section">
+  <h1 class="text-center text-dark about-heading">Designed for the future</h1>
+  <div class="container text-center mt-5">
+    <div class="row mt-5">
+      <div class="col-lg-6 col-sm-12 mt-5">
+       <h4 class="text-start">Introducing an extensible editor</h4> 
+        <p class="text-start mt-3">Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+          The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+          videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+          change the looks of a blog.</p>
+      
+       <h4 class="text-start mt-5">Robust content management</h4> 
+       <p class="text-start mt-3">Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+        by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p> 
+      </div>
+      <div class="col-lg-6 col-sm-12">
+    <img src="./images/illustration-editor-desktop.svg" class="img-fluid  about-img" width="1250" height="650"/>
+      </div>
+    </div>
+ </div>
+
+ <div class="CTA-section py-4">
+  <img src="./images/cta-image.png" class="img-fluid cta-image" alt="Call to Action Image">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-lg-6 col-sm-12">
+        <img src="./images/illustration-phones.svg" class="img-fluid" alt="Illustration of Phones">
+      </div>
+      <div class="col-lg-6 col-sm-12 align-self-center">
+        <h1 class="text-white text-lg-start cta-heading">State of the Art Infrastructure</h1>
+        <p class="text-lg-start text-white cta-content">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container text-center mt-5">
+
+    <div class="row mt-5">
+      <div class="col-lg-6 col-sm-12 mt-5">
+        <img src="./images/illustration-laptop-desktop.svg" class="img-fluid about2-img" alt="Illustration of laptop and desktop computers">
+      </div>
+      <div class="col-lg-6 col-sm-12 mt-5">
+        <h4 class="text-start" style="color: hsl(208, 49%, 24%);">Free, open, simple</h4>
+        <p class="text-start mt-3">Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+
+        <h4 class="text-start mt-5" style="color: hsl(208, 49%, 24%);">Powerful tooling</h4>
+        <p class="text-start mt-3">Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites.</p>
+      </div>
+  
+  </div>
+</div>
+
+
+ <div>
+ 
+
+
+
+  <!-- Footer -->
+
+<footer style="background-color:hsl(240, 10%, 16%) ; border-radius: 0 10% 0 0;" >
+ 
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-5">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto ">
+            <!-- Content -->
+            <h6 class="mt-5"><img src="./images/logo.svg"/></h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold text-white mt-5">Products</h6>
+            <p>
+
+ 
+              <a href="#!" class="text-white" style="text-decoration: none;">Overview</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white" style="text-decoration: none;">Pricing</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white" style="text-decoration: none;">Marketplace</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white" style="text-decoration: none;"> Features</a>
+            </p>
+            <p>
+  
+  <a href="#!" class="text-white" style="text-decoration: none;">
+    Integrations </a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold text-white mt-5">Company</h6>
+          
+            <p>
+              <a href="#!" class="text-white" style="text-decoration: none;">
+                About
+              </a>
+            </p>
+            <p>
+              <a href="#!" class="text-white" style="text-decoration: none;">  Team
+                </a>
+            </p>
+            <p>
+              <a href="#!" class="text-white" style="text-decoration: none;">Blog
+               </a>
+            </p>
+            <p>
+              <a href="#!" class="text-white" style="text-decoration: none;"> Careers</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold text-white mt-5">
+              Connect
+              
+              </h6>
+              <p>
+                <a href="#!" class="text-white" style="text-decoration: none;">
+                  Contact
+                </a>
+              </p>
+              <p>
+                <a href="#!" class="text-white" style="text-decoration: none;">Newsletter
+                  </a>
+              </p>
+              <p>
+                <a href="#!" class="text-white" style="text-decoration: none;"> 
+                  LinkedIn
+                 </a>
+              </p>
+            
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+   
+  </footer>
+  <!-- Footer -->
+
+
+ 
+
+  <!-- 
+
+
+  
+
+ -->
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
